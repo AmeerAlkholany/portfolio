@@ -1,5 +1,5 @@
 // GitHubRepo import removed as unused
-import { getRepositories, GitHubRepo } from "@/lib/github";
+import { getRepositories } from "@/lib/github";
 import ProjectCard from "./project-card";
 import { siteConfig } from "@/lib/site-config";
 
