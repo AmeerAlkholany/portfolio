@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+// Image import removed as unused
 
 export default function Navbar() {
   return (
