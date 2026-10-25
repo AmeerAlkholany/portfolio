@@ -6,17 +6,17 @@ import ScrollReveal from "./scroll-reveal";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-black">
-      <div className="max-w-4xl mx-auto px-4">
-        <ScrollReveal className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 border-l-4 border-emerald-400 pl-4">
+    <section id="skills" className="py-12 sm:py-16 md:py-20 bg-black">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <ScrollReveal className="mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4 border-l-4 border-emerald-400 pl-4">
             Skills
           </h2>
-          <p className="text-gray-400">Continuously learning, refining skills, delivering quality code</p>
+          <p className="text-gray-400 text-sm sm:text-base">Continuously learning, refining skills, delivering quality code</p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2 sm:gap-3">
             {defaultSkills.map((skill, index) => (
               <motion.span
                 key={skill}
@@ -31,7 +31,7 @@ export default function Skills() {
                   scale: 1.05,
                   backgroundColor: "rgba(52, 211, 153, 0.2)",
                 }}
-                className="px-4 py-2 bg-zinc-900 text-emerald-400 rounded-full text-sm font-medium border border-zinc-800 hover:border-emerald-400/50 transition-colors cursor-default"
+                className="px-3 py-1.5 sm:px-4 sm:py-2 bg-zinc-900 text-emerald-400 rounded-full text-xs sm:text-sm font-medium border border-zinc-800 hover:border-emerald-400/50 transition-colors cursor-default"
               >
                 {skill}
               </motion.span>
