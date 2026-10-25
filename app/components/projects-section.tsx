@@ -1,11 +1,9 @@
 import { getRepositories } from "@/lib/github";
 import ProjectCard from "./project-card";
 import { siteConfig } from "@/lib/site-config";
-import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 
 export default async function ProjectsSection() {
   const username = process.env.GITHUB_USERNAME ?? "";
-  const reducedMotion = useReducedMotion();
   const repos = await getRepositories(username);
 
   if (!username) {
