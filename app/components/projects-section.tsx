@@ -36,7 +36,7 @@ export default async function ProjectsSection() {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-emerald-400 border-l-4 border-emerald-400 pl-4">
           Projects
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {repos.map((repo) => (
             <ProjectCard
               key={repo.id}

@@ -29,15 +29,15 @@ const itemVariants = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] flex items-center justify-center bg-[#0a0a0a] overflow-hidden">
+    <section className="relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[75vh] flex items-center justify-center bg-[#0a0a0a] overflow-hidden">
       {/* Subtle background decoration */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
-        <div className="absolute top-10 -left-10 w-64 h-64 sm:w-96 sm:h-96 bg-emerald-400 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-72 h-72 sm:w-[28rem] sm:h-[28rem] bg-emerald-400 rounded-full blur-3xl" />
+        <div className="absolute top-4 -left-4 sm:top-10 sm:-left-10 w-40 h-40 sm:w-64 sm:h-64 md:w-80 md:h-80 bg-emerald-400 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] bg-emerald-400 rounded-full blur-3xl" />
       </div>
 
       <motion.div
-        className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24 text-center"
+        className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 text-center"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -51,21 +51,21 @@ export default function Hero() {
 
         <motion.h1
           variants={itemVariants}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 sm:mb-6 leading-tight tracking-tight"
+          className="text-[1.75rem] sm:text-[2.25rem] md:text-[3rem] lg:text-[3.75rem] font-extrabold text-white mb-4 sm:mb-6 leading-tight tracking-tight"
         >
           Turn Technology Into Your Competitive Advantage
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
-          className="text-base sm:text-lg md:text-xl text-gray-400 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed px-2"
+          className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 mb-6 sm:mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed px-2"
         >
           {siteConfig.bio}
         </motion.p>
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2 sm:px-4"
         >
           <Link
             href="#projects"
@@ -83,17 +83,17 @@ export default function Hero() {
 
         <motion.div
           variants={itemVariants}
-          className="mt-8 sm:mt-10 flex justify-center"
+          className="mt-6 sm:mt-8 md:mt-10 flex justify-center"
         >
           <a
             href={siteConfig.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-emerald-400 transition-colors duration-200 flex items-center gap-2 text-sm focus:outline-none focus:text-emerald-400"
+            className="text-gray-500 hover:text-emerald-400 transition-colors duration-200 flex items-center gap-2 text-xs sm:text-sm focus:outline-none focus:text-emerald-400"
             aria-label="GitHub Profile"
           >
             <svg
-              className="w-5 h-5 sm:w-6 sm:h-6"
+              className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
               viewBox="0 0 24 24"
               fill="currentColor"
             >

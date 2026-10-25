@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useScrollReveal } from "@/lib/hooks/use-scroll-reveal";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 
 interface ScrollRevealProps {
   children: React.ReactNode;
@@ -24,7 +25,16 @@ export default function ScrollReveal({
   direction = "up",
 }: ScrollRevealProps) {
   const { ref, isVisible } = useScrollReveal();
+  const prefersReducedMotion = useReducedMotion();
   const { y, x } = directions[direction];
+
+  if (prefersReducedMotion) {
+    return (
+      <div ref={ref} className={className}>
+        {children}
+      </div>
+    );
+  }
 
   return (
     <motion.div

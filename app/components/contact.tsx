@@ -4,7 +4,7 @@ import ScrollReveal from "./scroll-reveal";
 export default function Contact() {
   return (
     <section id="contact" className="py-12 sm:py-16 md:py-20 bg-[#0a0a0a]">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 sm:mb-8 border-l-4 border-emerald-400 pl-4">
             Contact
@@ -12,7 +12,7 @@ export default function Contact() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2">
             <div className="bg-zinc-900/80 rounded-xl p-5 sm:p-6 md:p-7 border border-zinc-800">
               <h3 className="text-emerald-400 font-semibold mb-4 text-base sm:text-lg">Get in Touch</h3>
               <div className="space-y-3">

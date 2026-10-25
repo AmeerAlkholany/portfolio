@@ -11,7 +11,7 @@ export default function About() {
           </h2>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2">
           <ScrollReveal delay={0.1}>
             <div className="bg-zinc-900/80 rounded-xl p-5 sm:p-6 md:p-7 border border-zinc-800 hover:border-zinc-700 transition-colors">
               <h3 className="text-emerald-400 font-semibold mb-4 text-base sm:text-lg">Services</h3>
