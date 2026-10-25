@@ -15,12 +15,12 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className="bg-zinc-900/60 rounded-xl p-5 sm:p-6 border border-zinc-800 hover:border-emerald-400/40 transition-colors duration-200 group">
-      <h3 className="text-base sm:text-lg font-semibold text-emerald-400 mb-2">
+      <h3 className="text-base sm:text-lg font-semibold text-emerald-400 mb-2 break-words">
         <a
           href={htmlUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block hover:underline focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-zinc-900 rounded"
+          className="hover:underline focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-zinc-900 rounded"
         >
           {name}
         </a>
