@@ -1,5 +1,5 @@
 import { siteConfig } from "@/lib/site-config";
-import ScrollReveal from "@/components/scroll-reveal";
+import ScrollReveal from "./scroll-reveal";
 
 export default function Footer() {
   const year = new Date().getFullYear();

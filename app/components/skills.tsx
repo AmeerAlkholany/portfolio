@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { defaultSkills } from "@/lib/skills";
-import ScrollReveal from "@/components/scroll-reveal";
+import ScrollReveal from "./scroll-reveal";
 
 export default function Skills() {
   return (
