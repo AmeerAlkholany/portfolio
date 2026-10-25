@@ -1,22 +1,40 @@
-// siteConfig import removed as unused
 import { defaultSkills } from "@/lib/skills";
+import ScrollReveal from "@/components/scroll-reveal";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-16 bg-black text-white border-t border-zinc-800">
+    <section id="skills" className="py-20 bg-black">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6 text-[#34d399] border-b border-zinc-800 pb-2">
-          My Skills
-        </h2>
-        <ul className="flex flex-wrap gap-4">
-          {defaultSkills.map((skill) => (
-            <li key={skill}>
-              <span className="px-3 py-1 bg-[#34d399] text-black rounded-full text-sm font-medium">
+        <ScrollReveal className="mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 border-l-4 border-emerald-400 pl-4">
+            技能栈
+          </h2>
+          <p className="text-gray-400">持续学习，精进技术，交付优质代码</p>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.1}>
+          <div className="flex flex-wrap gap-3">
+            {defaultSkills.map((skill, index) => (
+              <motion.span
+                key={skill}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  delay: index * 0.05,
+                  duration: 0.3,
+                  ease: "easeOut",
+                }}
+                whileHover={{
+                  scale: 1.05,
+                  backgroundColor: "rgba(52, 211, 153, 0.2)",
+                }}
+                className="px-4 py-2 bg-zinc-900 text-emerald-400 rounded-full text-sm font-medium border border-zinc-800 hover:border-emerald-400/50 transition-colors cursor-default"
+              >
                 {skill}
-              </span>
-            </li>
-          ))}
-        </ul>
+              </motion.span>
+            ))}
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
