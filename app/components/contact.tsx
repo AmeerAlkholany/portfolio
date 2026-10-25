@@ -7,14 +7,14 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto px-4">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 border-l-4 border-emerald-400 pl-4">
-            联系我
+            Contact
           </h2>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-zinc-900 rounded-lg p-6 border border-zinc-800">
-              <h3 className="text-emerald-400 font-semibold mb-4">联系方式</h3>
+              <h3 className="text-emerald-400 font-semibold mb-4">Get in Touch</h3>
               <div className="space-y-3">
                 {siteConfig.email && (
                   <a
@@ -41,7 +41,7 @@ export default function Contact() {
             </div>
 
             <div className="bg-zinc-900 rounded-lg p-6 border border-zinc-800">
-              <h3 className="text-emerald-400 font-semibold mb-4">社交媒体</h3>
+              <h3 className="text-emerald-400 font-semibold mb-4">Social Links</h3>
               <div className="flex gap-4">
                 {siteConfig.github && (
                   <a

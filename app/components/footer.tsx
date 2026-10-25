@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-4xl mx-auto px-4 text-center">
         <ScrollReveal delay={0.1}>
           <p className="text-sm text-gray-400 mb-4">
-            © {year} Ameer Al.kholany · 用代码创造价值
+            © {year} Ameer Al.kholany · Building value through code
           </p>
         </ScrollReveal>
 

@@ -10,9 +10,9 @@ export default function Skills() {
       <div className="max-w-4xl mx-auto px-4">
         <ScrollReveal className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 border-l-4 border-emerald-400 pl-4">
-            技能栈
+            Skills
           </h2>
-          <p className="text-gray-400">持续学习，精进技术，交付优质代码</p>
+          <p className="text-gray-400">Continuously learning, refining skills, delivering quality code</p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
