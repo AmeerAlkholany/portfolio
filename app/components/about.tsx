@@ -1,5 +1,4 @@
 import ScrollReveal from "./scroll-reveal";
-import { siteConfig } from "@/lib/site-config";
 
 export default function About() {
   return (
