@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ameer KH - Portfolio
+
+A modern, high-performance portfolio website built with Next.js 15, TypeScript, and Tailwind CSS. Features an animated hero, project showcase, skills overview, gallery, and contact section.
 
 ## Getting Started
 
@@ -16,21 +18,52 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Pages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `/` — Home (hero, about section, projects, gallery, skills)
+- `/about` — About page
+- `/projects` — Projects page (from GitHub)
+- `/gallery` — Gallery page (screenshots)
+- `/skills` — Skills page
+- `/contact` — Contact page
 
-## Learn More
+### Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Set `GITHUB_USERNAME` in `.env.local` to pull your public repositories into the Projects section:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```env
+GITHUB_USERNAME=your-github-username
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Adding Gallery Screenshots
 
-## Deploy on Vercel
+The Gallery page (`/gallery`) displays screenshots of websites and systems you've developed.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Save your screenshot** into the `public/gallery/` folder (e.g., `public/gallery/website-name.png`). PNG or JPG works best.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Add an entry** to `lib/site-config.ts` in the `gallery` array:
+
+```ts
+{
+  id: "1",                       // unique identifier
+  title: "My Project Name",       // project title shown in modal
+  description: "A brief description of what this project does and the tech used.",
+  category: "Website",            // used for filtering (e.g. "Website", "App", "System")
+  src: "/gallery/website-name.png", // path relative to public/
+  width: 1920,                    // original image width (optional)
+  height: 1080,                   // original image height (optional)
+}
+```
+
+3. **Restart the dev server** if it's already running so Next.js picks up the new image.
+
+> Tip: Keep screenshots consistent (same aspect ratio) for the best grid appearance. A width of 1280px or higher is recommended for crisp display.
+
+## Build & Deploy
+
+```bash
+npm run build
+npm run start
+```
+
+Deploy to Vercel for the best experience.

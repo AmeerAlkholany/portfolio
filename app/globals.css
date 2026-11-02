@@ -23,6 +23,19 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes gradient-x {
+  0%, 100% {
+    transform: translateX(0%) translateY(0%) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateX(-10%) translateY(-10%) rotate(1deg) scale(1.1);
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 15s ease-in-out infinite;
+}
+
 :target {
   scroll-margin-top: 4rem;
 }

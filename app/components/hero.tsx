@@ -30,7 +30,12 @@ const itemVariants = {
 export default function Hero() {
   return (
     <section className="relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[75vh] flex items-center justify-center bg-[#0a0a0a] overflow-hidden">
-      {/* Subtle background decoration */}
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-emerald-400/10 via-transparent to-transparent animate-gradient-x" />
+        <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-emerald-400/10 via-transparent to-transparent animate-gradient-x" style={{ animationDelay: "4s" }} />
+      </div>
+      {/* Radial glow spots */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute top-4 -left-4 sm:top-10 sm:-left-10 w-40 h-40 sm:w-64 sm:h-64 md:w-80 md:h-80 bg-emerald-400 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-0 w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] bg-emerald-400 rounded-full blur-3xl" />
@@ -68,13 +73,13 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2 sm:px-4"
         >
           <Link
-            href="#projects"
+            href="/projects"
             className="px-6 py-3 sm:px-8 sm:py-4 bg-emerald-400 text-black font-semibold rounded-lg hover:bg-emerald-500 active:bg-emerald-600 transition-colors duration-200 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black"
           >
             View Projects
           </Link>
           <Link
-            href="#contact"
+            href="/contact"
             className="px-6 py-3 sm:px-8 sm:py-4 border border-emerald-400 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-400 hover:text-black active:bg-emerald-500 transition-all duration-200 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black"
           >
             Contact Me
