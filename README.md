@@ -59,6 +59,17 @@ The Gallery page (`/gallery`) displays screenshots of websites and systems you'v
 
 > Tip: Keep screenshots consistent (same aspect ratio) for the best grid appearance. A width of 1280px or higher is recommended for crisp display.
 
+## Testing
+
+End-to-end tests live in `tests/` and run with Playwright. The first run needs the browser binaries:
+
+```bash
+npx playwright install chromium
+npm test
+```
+
+`npm test` builds the site and serves it on port 3100 for the run. Set `PLAYWRIGHT_BASE_URL` (or `PLAYWRIGHT_PORT`) to test another origin.
+
 ## Build & Deploy
 
 ```bash

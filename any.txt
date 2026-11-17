@@ -1,0 +1,17 @@
+Finding a developer who reads your requirements carefully, respects your existing codebase, and delivers on time shouldn't be a gamble.
+
+I am a Full-Stack Web Developer specializing in PHP, JavaScript, Next.js, WordPress, and MySQL. Most clients hire me when they need one of three things: a fast, responsive website built from scratch, a custom admin panel to manage their business operations, or a reliable developer to step in and fix, speed up, or modify an existing website.
+
+How I Can Help With Your Project:
+
+• Custom WordPress Development: Pixel-perfect Figma-to-WordPress builds, Elementor Pro customization, custom PHP themes/plugins, and backend troubleshooting without bloating your site.
+• Admin Panels & Business Dashboards: Custom PHP/MySQL and Next.js control panels with role-based logins, CRUD database management, inquiry tracking, and automated CSV/Excel data processing.
+• Legacy PHP Updates & API Integrations: Modifying existing PHP/JavaScript websites, connecting or decoupling third-party REST APIs and webhooks, and modernizing outdated interfaces without breaking live features.
+• Website Speed & Core Web Vitals: Diagnosing slow MySQL queries, removing render-blocking scripts, and optimizing mobile and desktop load times for better SEO and conversions.
+
+How I Work:
+• Clear Communication: Plain-English updates and realistic timelines with no disappearing mid-project.
+• Safe Deployment: Careful testing so your live site and daily operations are never disrupted.
+• Proven Reliability: Backed by a 5.0 rating and a 100% on-time, on-budget delivery record.
+
+Send me a link to your website or a brief outline of your project, and I will reply with a clear technical plan to get it done.

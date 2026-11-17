@@ -16,7 +16,7 @@ test.describe('Responsive Portfolio', () => {
   for (const vp of viewports) {
     test(`no horizontal overflow at ${vp.name}`, async ({ page }) => {
       await page.setViewportSize({ width: vp.width, height: vp.height });
-      await page.goto('http://localhost:3000');
+      await page.goto('/');
       await page.waitForLoadState('networkidle');
 
       const htmlWidth = await page.evaluate(() => document.documentElement.scrollWidth);
@@ -28,23 +28,26 @@ test.describe('Responsive Portfolio', () => {
 
   test('mobile navigation works', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 812 });
-    await page.goto('http://localhost:3000');
+    await page.goto('/');
     await page.waitForLoadState('networkidle');
 
     const hamburger = page.locator('[aria-controls="mobile-menu"]');
     await expect(hamburger).toBeVisible();
     await hamburger.click();
     await expect(page.locator('#mobile-menu')).toBeVisible();
-    await expect(page.locator('#mobile-menu a')).toHaveCount(4);
+    await expect(page.locator('#mobile-menu a')).toHaveCount(6);
 
     const projectsLink = page.locator('#mobile-menu a', { hasText: 'Projects' });
     await projectsLink.click();
-    await expect(page.locator('#projects')).toBeVisible();
+    await page.waitForURL('**/projects');
+    // Next keeps the previous route's tree mounted (display:none) after a
+    // client-side navigation, so #projects matches twice; assert the visible one.
+    await expect(page.locator('#projects:visible')).toBeVisible();
   });
 
   test('hero heading fits on small screens', async ({ page }) => {
     await page.setViewportSize({ width: 320, height: 640 });
-    await page.goto('http://localhost:3000');
+    await page.goto('/');
     await page.waitForLoadState('networkidle');
 
     const heroH1 = page.locator('h1');
@@ -56,7 +59,7 @@ test.describe('Responsive Portfolio', () => {
 
   test('project cards resize to grid columns', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 768 });
-    await page.goto('http://localhost:3000');
+    await page.goto('/');
     await page.waitForLoadState('networkidle');
 
     const cards = page.locator('.group');
@@ -71,7 +74,7 @@ test.describe('Responsive Portfolio', () => {
 
   test('prefers-reduced-motion bypasses animation', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 812 });
-    await page.goto('http://localhost:3000');
+    await page.goto('/');
     await page.waitForLoadState('networkidle');
 
     // Elements with ScrollReveal should still be present and visible
@@ -82,7 +85,7 @@ test.describe('Responsive Portfolio', () => {
 
   test('buttons are touch-friendly (>=44px height)', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 812 });
-    await page.goto('http://localhost:3000');
+    await page.goto('/');
     await page.waitForLoadState('networkidle');
 
     // Hero CTA buttons

@@ -10,11 +10,11 @@ export interface GalleryItem {
 
 export const siteConfig = {
   name: "Ameer Al.kholany",
-  title: "Freelance Web Developer",
+  title: "Freelance Full-stack",
   email: "ameer@example.com", // Replace with your email
   github: "https://github.com/AmeerAlkholany",
   linkedin: "https://linkedin.com/in/ameeralkholany",
-  bio: "I am a senior Next.js developer with a passion for building high-performance web applications.",
+  bio: "I am a senior Full-stack developer with a passion for building high-performance web applications.",
   skills: [
     "Next.js",
     "React",
